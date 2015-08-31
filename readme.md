@@ -11,6 +11,7 @@ composer require fremail/lumen-nested-route-groups
 
 ## How to configure
 In bootstrap/app.php, change initialization of Lumen Application class to initialization of Lumen Nested Route Groups Application class.
+
 Before:
 
 ```
@@ -27,7 +28,7 @@ $app = new Fremail\NestedRouteGroups\Application(
 );
 ```
 
-### After these simple steps you can use nested rote groups in your application!
+### After these simple steps you can use nested route groups in your application!
 
 
 ## Example of using this lib
