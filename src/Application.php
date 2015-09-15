@@ -13,11 +13,7 @@ class Application extends \Laravel\Lumen\Application
     protected $middlewareStack = [];
 
     /**
-     * Register a set of routes with a set of shared attributes.
-     *
-     * @param  array  $attributes
-     * @param  \Closure  $callback
-     * @return void
+     * {@inheritdoc}
      */
     public function group(array $attributes, \Closure $callback)
     {
