@@ -5,13 +5,17 @@ Lumen already uses a group in bootstrap/app.php, that is why you can't use anoth
 
 ## How to install
 
-```
-composer require "fremail/lumen-nested-route-groups:~1.0@beta"
-```
+The current stability of this library is beta.
 Be sure you have an enough stability in the composer.json file:
 ```
 "minimum-stability": "beta",
 "prefer-stable": true
+```
+
+Installing the library:
+
+```
+composer require "fremail/lumen-nested-route-groups:~1.0"
 ```
 
 ## How to configure
