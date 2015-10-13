@@ -27,7 +27,7 @@ class Application extends \Laravel\Lumen\Application
             // merge middleware
             $attributes['middleware'] = array_merge($lastMiddleware, $middleware);
         } else {
-            $attributes['middleware'] = end($this->middlewareStack);
+            $attributes['middleware'] = end($this->middlewareStack) ? : null;
         }
         // merge prefixes
         if (!empty($attributes['prefix'])) {
