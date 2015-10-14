@@ -1,7 +1,7 @@
 {
   "name": "fremail/lumen-nested-route-groups",
   "type": "library",
-  "version": "1.0.0-beta",
+  "version": "1.0.1-beta",
   "description": "Extends a lumen application for using nested route groups",
   "keywords": ["lumen", "route", "group"],
   "license": "MIT",
