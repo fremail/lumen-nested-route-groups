@@ -39,16 +39,6 @@ class Application extends \Laravel\Lumen\Application
         } else {
             $attributes['prefix'] = end($this->prefixesStack) ? : null;
         }
-        // merge namespace
-        if (!empty($attributes['namespace'])) {
-            if (count($this->namespaceStack)) {
-                $attributes['namespace'] = end($this->namespaceStack) . '\\' . trim($attributes['namespace'], '\\');
-            } else {
-                $attributes['namespace'] = trim($attributes['namespace'], '\\');
-            }
-        } else {
-            $attributes['namespace'] = end($this->namespaceStack) ? : null;
-        }
 
         // merge attributes
         $this->groupAttributes = isset($this->groupAttributes) ? array_merge($this->groupAttributes, $attributes) : $attributes;
