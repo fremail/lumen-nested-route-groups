@@ -40,6 +40,15 @@ $app = new Fremail\NestedRouteGroups\Application(
 ### After these simple steps you can use nested route groups in your application!
 
 
+### Additional namespaces configuration
+By default this lib uses nested namespace ([Laravel style](https://laravel.com/docs/5.2/routing#route-group-namespaces)), but you can determine to use full namespaces instead ([Lumen style](https://lumen.laravel.com/docs/5.2/routing#route-group-namespaces)).
+
+**Steps for using full namespaces:**
+1. Create `config` directory if you don't have one in the project root.
+2. Copy `NestedRouteGroups.php` from `vendor/fremail/lumen-nested-route-groups/config` folder to the created `config` dir in the root.
+3. Open the `config/NestedRouteGroups.php` file and set 'namespace' value to 'full'.
+4. Add this line to your bootstrap/app.php: `$app->configure('NestedRouteGroups');`
+
 ## Example of using this lib
 This is an example of app/Http/routes.php
 
