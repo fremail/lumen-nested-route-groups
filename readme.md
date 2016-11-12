@@ -91,7 +91,7 @@ $app->group(['middleware' => 'auth'], function () use ($app) {
     });
     
     /**
-     * $app->any and $app->match available from v.1.2.0
+     * $app->any and $app->match available from v1.1.0
      */
     $app->any('/', function () use ($app) {
         echo "Hey! I don't care it's POST, GET, PATCH or another method. I'll answer on any of them :)";
