@@ -75,4 +75,43 @@ class Application extends \Laravel\Lumen\Application
         array_pop($this->namespaceStack);
     }
 
+    /**
+     * Register a route with the application with all methods:
+     * GET, POST, PUT, PATCH, DELETE and OPTIONS
+     *
+     * @param  string  $uri
+     * @param  mixed  $action
+     * @return $this
+     */
+    public function any($uri, $action)
+    {
+        $methods = [
+            'GET',
+            'POST',
+            'PUT',
+            'PATCH',
+            'DELETE',
+            'OPTIONS',
+        ];
+
+        return $this->match($methods, $uri, $action);
+    }
+
+    /**
+     * Register a route with the application with exactly defined methods.
+     *
+     * @param  array $methods
+     * @param  string $uri
+     * @param  mixed $action
+     * @return $this
+     */
+    public function match($methods, $uri, $action)
+    {
+        foreach ($methods as $method) {
+            $this->addRoute($method, $uri, $action);
+        }
+
+        return $this;
+    }
+
 }
